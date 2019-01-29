@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    
+}
+
+.flex-justify-end {
+    display: flex;
+    justify-content: end;
+}
+
+.flex-justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+
+

@@ -6,6 +6,20 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "hero-page"
+    label: "Hero Page"
+    folder: "src/pages/hero-page"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "hero-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: Cover Image, name: image, widget: image, required: true, tagname: ''}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+
+      
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
