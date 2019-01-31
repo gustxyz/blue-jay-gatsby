@@ -10,12 +10,12 @@ import ReactFullpage from '@fullpage/react-fullpage'
 const FullPage  = ({data}) => {
   //const pages = data.allMarkdownRemark.edges;
 
-  //console.log(pages); 
+  //console.log(pages);
       return (
-   
+
         <Layout>
-          
-         
+
+
 
   <ReactFullpage
 
@@ -23,60 +23,99 @@ const FullPage  = ({data}) => {
 
       return (
         <div id="fullpage-wrapper">
-          <div 
+          <div
             style={{
               height: "100vh",
               backgroundSize: "cover",
               backgroundPosition: "bottom",
-              backgroundImage: "url(https://images.unsplash.com/photo-1511942374870-deb388a44425?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80)"
+              backgroundImage: "url(http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_1_BLUEJAY.png)"
             }}
           className="section">
-            <h3 
-              style={{
-                textAlign: "center",
-                marginBottom: "30px",
-                fontSize: "60px",
-                color: "white"
-              }}
-            >Morange</h3>
+              <div
+                  style={{
+                    position: "absolute",
+                    top: ".5em",
+                    left: ".5em",
+                    fontFamily: "Helvetica, sans-serif",
+                    fontSize: "6em",
+                    fontWeight: "Bold",
+                    lineHeight: ".8em",
+                    letterSpacing: ".05em",
+                    color: "white",
+                  }}>
+                  BLUE JAY <br />
+                  SCREEN PRINTING
+              </div>
           </div>
           <div
             style={{
               height: "100vh",
               backgroundSize: "cover",
               backgroundPosition: "right bottom",
-              backgroundImage: "url(https://images.unsplash.com/photo-1545427692-6b57963f61a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80)"
+              backgroundImage: "url(http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_2_BLUEJAY.png)"
             }}
           className="section">
-            
-              <h3
+              <div
                 style={{
-                  textAlign: "center",
-                  marginBottom: "30px",
-                  fontSize: "60px",
-                  color: "white"
-                }}
-              >Morange</h3>
-              
-        
+                  position: "absolute",
+                  top: ".5em",
+                  left: ".5em",
+                  fontFamily: "Helvetica, sans-serif",
+                  fontSize: "6em",
+                  fontWeight: "Bold",
+                  lineHeight: ".8em",
+                  letterSpacing: ".05em",
+                  color: "white",
+                }}>
+                CUSTOM <br />
+                APPAREL
+              </div>
           </div>
           <div
             style={{
               height: "100vh",
               backgroundSize: "cover",
-              backgroundImage: "url(https://images.unsplash.com/photo-1544627836-822bfe450209?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80)"
+              backgroundImage: "url(http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_3_BLUEJAY.png)"
             }}
           className="section">
-            <h3
+            <div
               style={{
-                textAlign: "center",
-                marginBottom: "30px",
-                fontSize: "60px",
-                color: "white"
-              }}
-            >Morange
-
-             </h3>
+                position: "absolute",
+                top: ".5em",
+                right: ".5em",
+                fontFamily: "Helvetica, sans-serif",
+                fontSize: "6em",
+                fontWeight: "Bold",
+                lineHeight: ".8em",
+                letterSpacing: ".05em",
+                color: "white",
+              }}>
+              THE BEST IN <br />
+              EMBROIDERY
+            </div>
+          </div>
+          <div
+            style={{
+              height: "100vh",
+              backgroundSize: "cover",
+              backgroundImage: "url(http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_4_BLUEJAY.png)"
+            }}
+          className="section">
+            <div
+              style={{
+                position: "absolute",
+                top: ".5em",
+                left: ".5em",
+                fontFamily: "Helvetica, sans-serif",
+                fontSize: "6em",
+                fontWeight: "Bold",
+                lineHeight: ".8em",
+                letterSpacing: ".05em",
+                color: "white",
+              }}>
+              CUT <br />
+              & SEW
+            </div>
           </div>
         </div>
       );
@@ -87,21 +126,21 @@ const FullPage  = ({data}) => {
 />
         </Layout>
       )
-    
+
   };
 
 
 
 export const heroQuery = graphql`
   query HeroQuery {
-    allMarkdownRemark( 
+    allMarkdownRemark(
        filter: { frontmatter: { templateKey: { eq: "hero-page" } }}
     ){
         edges {
           node {
           id
           html
-          
+
           frontmatter {
               title
               image {
