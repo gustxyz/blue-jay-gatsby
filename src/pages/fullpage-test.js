@@ -45,6 +45,36 @@ const FullPage  = ({data}) => {
                   }}>
                   BLUE JAY <br />
                   SCREEN PRINTING
+                    <div
+                      style={{
+                        position: "relative",
+                        width: "40vw",
+                        top: "20vh",
+                        fontFamily: "Helvetica, sans-serif",
+                        fontSize: "2vh",
+                        textAlign: "justify",
+                        lineHeight: "1.2em",
+                        letterSpacing: "0.05em",
+                        fontWeight: "normal",
+                        color: "white",
+                      }}>
+                      <h2>QUALITY</h2>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      <button style={{
+                        position: "relative",
+                        top: "3vh",
+                        backgroundColor: "#FFFFFF",
+                        border: "none",
+                        color: "#33bbff",
+                        //display: "inline-block",
+                        padding: ".5em 1em",
+                        fontFamily: "Helvetica, sans-serif",
+                        fontSize: "2vh",
+                        lineHeight: "1.2em",
+                        letterSpacing: "0.05em",
+                        fontWeight: "BOLD",
+                      }}> LEARN MORE </button>
+                    </div>
               </div>
           </div>
           <div
@@ -69,6 +99,36 @@ const FullPage  = ({data}) => {
                 }}>
                 CUSTOM <br />
                 APPAREL
+                  <div
+                    style={{
+                      position: "relative",
+                      width: "40vw",
+                      top: "15vh",
+                      fontFamily: "Helvetica, sans-serif",
+                      fontSize: "2vh",
+                      textAlign: "justify",
+                      lineHeight: "1.2em",
+                      letterSpacing: "0.05em",
+                      fontWeight: "normal",
+                      color: "white",
+                    }}>
+                    <h2>COMMITMENT</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <button style={{
+                        position: "relative",
+                        top: "3vh",
+                        backgroundColor: "#FFFFFF",
+                        border: "none",
+                        color: "#eecc22",
+                        //display: "inline-block",
+                        padding: ".5em 1em",
+                        fontFamily: "Helvetica, sans-serif",
+                        fontSize: "2vh",
+                        lineHeight: "1.2em",
+                        letterSpacing: "0.05em",
+                        fontWeight: "BOLD",
+                      }}> LEARN MORE </button>
+                  </div>
               </div>
           </div>
           <div
@@ -86,13 +146,47 @@ const FullPage  = ({data}) => {
                 fontFamily: "Helvetica, sans-serif",
                 fontSize: "10vh",
                 fontWeight: "Bold",
+                textAlign: "right",
                 lineHeight: ".8em",
                 letterSpacing: ".05em",
                 color: "white",
               }}>
               THE BEST IN <br />
               EMBROIDERY
-            </div>
+                <div
+                    style={{
+                      position: "relative",
+                      //display: "block",
+                      width: "40vw",
+                      top: "15vh",
+                      right: ".5em",
+                      fontFamily: "Helvetica, sans-serif",
+                      fontSize: "2vh",
+                      textAlign: "justify",
+                      textAlignLast: "right",
+                      lineHeight: "1.2em",
+                      letterSpacing: "0.05em",
+                      fontWeight: "normal",
+                      color: "white",
+                    }}>
+                    <h2 style={{textAlign:"right"}}>SERVICE</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <button style={{
+                        position: "relative",
+                        top: "3vh",
+                        backgroundColor: "#FFFFFF",
+                        border: "none",
+                        color: "black",
+                        //display: "inline-block",
+                        padding: ".5em 1em",
+                        fontFamily: "Helvetica, sans-serif",
+                        fontSize: "2vh",
+                        lineHeight: "1.2em",
+                        letterSpacing: "0.05em",
+                        fontWeight: "BOLD",
+                      }}> LEARN MORE </button>
+                </div>
+              </div>
           </div>
           <div
             style={{
@@ -115,7 +209,38 @@ const FullPage  = ({data}) => {
               }}>
               CUT <br />
               & SEW
-            </div>
+                <div
+                    style={{
+                      position: "relative",
+                      width: "40vw",
+                      top: "15vh",
+                      fontFamily: "Helvetica, sans-serif",
+                      fontSize: "2vh",
+                      textAlign: "justify",
+                      lineHeight: "1.2em",
+                      letterSpacing: "0.05em",
+                      fontWeight: "normal",
+                      color: "white",
+                    }}>
+                    <h2>GROWTH</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br />
+                      <button style={{
+                        position: "relative",
+                        top: "3vh",
+                        backgroundColor: "#FFFFFF",
+                        border: "none",
+                        color: "black",
+                        //display: "inline-block",
+                        padding: ".5em 1em",
+                        fontFamily: "Helvetica, sans-serif",
+                        fontSize: "2vh",
+                        lineHeight: "1.2em",
+                        letterSpacing: "0.05em",
+                        fontWeight: "BOLD",
+                      }}> LEARN MORE </button>
+                </div>
+              </div>
           </div>
         </div>
       );
