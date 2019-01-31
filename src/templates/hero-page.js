@@ -9,6 +9,7 @@ export const HeroPageTemplate = ({
   body
 }) => (
   <section className="section section--gradient">
+  <h1>Test</h1>
     {body}
     <img src={image}/>
 
@@ -25,6 +26,7 @@ const HeroPage = ({ data }) => {
 
   return (
     <Layout>
+      
       <HeroPageTemplate
         image={frontmatter.image}
         body={data.html}
