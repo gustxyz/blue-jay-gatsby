@@ -1,20 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import ReactFullpage from '@fullpage/react-fullpage'
 
-export const HeroPageTemplate = ({
-  image,
-  body
-}) => (
-  
+
+
+
+const FullPage  = ({data}) => {
+  //const pages = data.allMarkdownRemark.edges;
+
+  //console.log(pages); 
+      return (
+   
+        <Layout>
+          
+         
+
   <ReactFullpage
 
-    render={() => (
+    render={() => {
 
-  
+      return (
         <div id="fullpage-wrapper">
           <div 
             style={{
@@ -72,81 +79,46 @@ export const HeroPageTemplate = ({
              </h3>
           </div>
         </div>
-    
-    )}
+      );
+    }}
   />
+);
+        }
+/>
+        </Layout>
+      )
+    
+  };
 
 
 
-//   <ReactFullpage
-//           navigation
-//           onLeave={this.onLeave.bind(this)}
-//           // sectionsColor={this.state.sectionsColor}
-//           render={comp =>
-//             console.log('render prop change') || (
-//               <ReactFullpage.Wrapper>
-//                 {
-//                   <section className="section section--gradient">
-//                     <h1>Test</h1>
-//                     {body}
-//                     <img src={image} />
-      
-//                   </section>
-//                 }
-//               </ReactFullpage.Wrapper>
-//             )
-//           }
-// />
-  
-)
-
-HeroPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  body: PropTypes.string,
-}
-
-const HeroPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-
-  return (
-    <Layout>
-      
-      <HeroPageTemplate
-        image={frontmatter.image}
-        body={data.html}
-      />
-    </Layout>
-  )
-}
-
-HeroPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
-
-export default HeroPage
-
-export const heroPageQuery = graphql`
-  query HeroPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        
-        title
-        
-        image {
-          childImageSharp {
+export const heroQuery = graphql`
+  query HeroQuery {
+    allMarkdownRemark( 
+       filter: { frontmatter: { templateKey: { eq: "hero-page" } }}
+    ){
+        edges {
+          node {
+          id
+          html
+          
+          frontmatter {
+              title
+              image {
+              id
+              childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
+              }
+            }
+          }
         }
-        
-        
-        }
+      }
     }
-  }
-`
+`;
+
+
+
+export default FullPage

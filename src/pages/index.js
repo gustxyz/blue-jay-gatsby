@@ -15,6 +15,22 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
+            <div>
+              <Link
+                to="/fullpage-test/"
+                activeStyle={{
+                  color: "red",
+                }}
+                ref={el => {
+                  this.myLink = el
+                }}
+                state={{
+                  pleasant: "reasonably",
+                }}
+              >
+                Full Page Test
+              </Link>
+            </div>
             {posts
               .map(({ node: post }) => (
                 <div
