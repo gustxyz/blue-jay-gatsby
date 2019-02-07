@@ -60,6 +60,8 @@ const TemplateWrapper = ({ children }) => (
           </Navbar.Collapse>
          </Navbar>
         <div>{children}</div>
+
+        <div bsClass="bg-black"><h1>Footer</h1></div>
       </div>
       
     )}

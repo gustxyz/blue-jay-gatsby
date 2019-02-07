@@ -15,6 +15,9 @@
 
 
 .jumbotron {
-    background: black;
+    background: #8998ae;
 }
 
+.work-sale {
+    background-image: url("http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_4_BLUEJAY.png")
+}
