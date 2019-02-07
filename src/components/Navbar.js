@@ -1,57 +1,52 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+// import React from 'react'
+// import { Link } from 'gatsby'
+// import Navbar from 'react-bootstrap'
+// import github from '../img/github-icon.svg'
+// import logo from '../img/logo.svg'
 
-const Navbar = class extends React.Component {
+// const Navbar = class extends React.Component {
 
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-   if ($navbarBurgers.length > 0) {
- 
-     // Add a click event on each of them
-     $navbarBurgers.forEach( el => {
-       el.addEventListener('click', () => {
- 
-         // Get the target from the "data-target" attribute
-         const target = el.dataset.target;
-         const $target = document.getElementById(target);
- 
-         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-         el.classList.toggle('is-active');
-         $target.classList.toggle('is-active');
- 
-       });
-     });
-   }
- }
- 
- render() {
-   return (
   
-  <nav className="navbar" role="navigation" aria-label="main-navigation">
-    <div className="container">
-      <div id="navMenu" className="navbar-menu flex-justify-end">
-      <div className="navbar-start flex-justify-around w-35">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Services
-        </Link>
-        <Link className="navbar-item" to="/contact">
-          Design
-        </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Contact
-        </Link>
-      </div>
-      </div>
-    </div>
-  </nav>
-  )}
-}
+ 
+//  render() {
+//    return (
+//     <Navbar bg="light" expand="lg">
+//     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+//     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//     <Navbar.Collapse id="basic-navbar-nav">
+//       <Nav className="mr-auto">
+//         <Nav.Link href="#home">Home</Nav.Link>
+//         <Nav.Link href="#link">Link</Nav.Link>
+//         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+//           <NavDropdown.Item href="#action/3.1">
+//             <Link to="/about">
+//               About
+//             </Link>
+//             <Link to="/products">
+//               Services
+//             </Link>
+//             <Link to="/contact">
+//               Design
+//             </Link>
+//             <Link to="/contact/examples">
+//               Contact
+//             </Link>
+//           </NavDropdown.Item>
+//           <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+//           <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+//           <NavDropdown.Divider />
+//           <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+//         </NavDropdown>
+//       </Nav>
+//       <Form inline>
+//         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+//         <Button variant="outline-success">Search</Button>
+//       </Form>
+//     </Navbar.Collapse>
+//   </Navbar>
+  
+  
+//   )}
+// }
 
-export default Navbar
+// export default Navbar

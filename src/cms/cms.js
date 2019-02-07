@@ -9,4 +9,3 @@ import HeroPagePreview from './preview-templates/HeroPagePreview'
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
-CMS.registerPreviewTemplate('hero-page', HeroPagePreview)

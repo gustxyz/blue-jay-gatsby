@@ -1,62 +1,57 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import { Jumbotron, Button, ButtonToolbar, Dropdown, DropdownButton, Image, Container, Row, Col } from 'react-bootstrap';
+
+
+
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    // const { data } = this.props
+    // const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            <div>
-              <Link
-                to="/fullpage-test/"
-                activeStyle={{
-                  color: "red",
-                }}
-                ref={el => {
-                  this.myLink = el
-                }}
-                state={{
-                  pleasant: "reasonably",
-                }}
-              >
-                Full Page Test
-              </Link>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ))}
-          </div>
-        </section>
+      <Layout >
+          <Jumbotron className="h-100 w-100">
+          <Container>
+            <Row>
+              <Col xs={6} md={4}>
+              <h1 >Title Text</h1>
+              <p >Subtitle Text</p>
+              </Col>
+             
+              <Col xs={6} md={4}>
+                <Image src="https://static1.squarespace.com/static/590d0d33e6f2e1fda3fe9b66/t/5be61a04032be4061c45e656/1541806411675/?format=1500w" thumbnail />
+              </Col>
+             </Row>
+              <Row>
+              <ButtonToolbar>
+                {['I want to...', 'Print', '50-100', 'Shirts'].map(
+                  variant => (
+                    <DropdownButton
+                      title={variant}
+                      id={`dropdown-variants-${variant}`}
+                      key={variant}
+                    >
+                      <Dropdown.Item eventKey="1">I want to...</Dropdown.Item>
+                      <Dropdown.Item eventKey="2">Print</Dropdown.Item>
+                      <Dropdown.Item eventKey="3" active>
+                        50-100
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item eventKey="4">Shirts</Dropdown.Item>
+                    </DropdownButton>
+                  ),
+                )}
+              </ButtonToolbar>
+              <br></br>
+              <Button className="">Send Request</Button>
+              </Row>
+          </Container>
+                
+            </Jumbotron>
       </Layout>
     )
   }

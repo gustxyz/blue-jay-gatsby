@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from "gatsby"
-
-import Navbar from '../components/Navbar'
+import { StaticQuery, graphql, Link } from "gatsby"
+import {Navbar, Nav} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles.css'
 
 const TemplateWrapper = ({ children }) => (
@@ -36,9 +36,32 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
-        <Navbar />
+        <Navbar fixed="top" bg="transparent" expand="lg">
+          
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+           
+                  
+                <Link to="/about">
+                  About
+                </Link>
+                  <Link to="/services">
+                    Services
+                  </Link>
+                  <Link  to="/design">
+                    Design
+                  </Link>
+                  <Link  to="/contact">
+                    Contact
+                  </Link>
+              
+            </Nav>
+          </Navbar.Collapse>
+         </Navbar>
         <div>{children}</div>
       </div>
+      
     )}
   />
 )
