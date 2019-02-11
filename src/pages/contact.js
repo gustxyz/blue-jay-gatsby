@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import {  Navbar, Nav, Button, Image, Container, Row, Col } from 'react-bootstrap';
-
+import {  Form, Navbar, Nav, Button, Image, Container, Row, Col } from 'react-bootstrap';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
 import fbLogo from '../img/facebook.svg';
 import igLogo from '../img/instagram-logo.svg';
@@ -42,7 +43,7 @@ export default class ContactPage extends React.Component {
         
          <div className="view-height-75 bg-orange position-relative" >
     
-           <h1 className="text-center text-white pt-25-vh">Our Services</h1>
+           <h1 className="text-center text-white pt-25-vh">Tell us about your project!</h1>
            <Link className="page-link bj-header-logo" to="/">
                <img src={bluejayLogo} />
            </Link>
@@ -50,30 +51,99 @@ export default class ContactPage extends React.Component {
     
          </div>
   
-         <Container >
-             <Row>
-               <Col className="mt-n10" xs={12}>
-                 <div md={6} className="bg-gray blurb pt-5 pb-5" >
-                     <h1 className="text-color-orange">Lorem Ipsum</h1>
-                     <p>
-                       Here at Blue Jay Screen Printing we can take your order for 25 family reunion shirts to 950 sweatshirts with,
-                       your logo on them. No matter how big your order is we can acomplish any task with a quick turnaround time and quality,
-                       soft hand prints.
-                     </p>
-                     <div className="d-flex justify-content-between">
-                       <div >
-                         (123)465-7891
-                         <br/>
-                         Mon - Sun: 8:00am - 6:00pm
-                       </div>
-                       <div>
-                         <Button className="bg-orange pl-4 pr-4">Order Embroidery</Button>
-                       </div>
-                       
-                     </div>
-                 </div>
+         <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
+             <Form className="row justify-content-around">
+               <Col  xs={12}md={6} lg={3}>
+               
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label>Name*</Form.Label>
+                      <Form.Control type="name" placeholder="Alex Long" />
+                    </Form.Group>
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label>Email*</Form.Label>
+                      <Form.Control type="email" placeholder="test@gmail.com" />
+                    </Form.Group>
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label>Phone*</Form.Label>
+                      <Form.Control type="phone" placeholder="15091234567" />
+                    </Form.Group>
+                
                </Col>
-             </Row>       
+               <Col  xs={12}md={6} lg={3}>
+               
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label>Project Name*</Form.Label>
+                      <Form.Control type="project-name" placeholder="New BlueJay Website" />
+                    </Form.Group>
+                    <div className="d-flex justify-content-around">
+                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
+                        <Form.Label>Type of Service</Form.Label>
+                        <Form.Control as="select">
+                          <option>Embroidary</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </Form.Control>
+                      </Form.Group>
+                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
+                          <Form.Label>Qunatity Needed*</Form.Label>
+                          <Form.Control type="quantity" placeholder="3" />
+                      </Form.Group>
+                    </div>
+
+                    <div className="d-flex justify-content-around">
+                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
+                        <Form.Label>Item to service</Form.Label>
+                        <Form.Control as="select">
+                          <option>Shirt</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </Form.Control>
+                      </Form.Group>
+                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
+                          <Form.Label>Qunatity Needed*</Form.Label>
+                          <Form.Control type="quantity" placeholder="3" />
+                      </Form.Group>
+                    </div>
+
+                    <div className="d-flex justify-content-around">
+                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
+                        <Form.Label>Turnaround Time</Form.Label>
+                        <Form.Control as="select">
+                          <option>Yes</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </Form.Control>
+                      </Form.Group>
+                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
+                          <Form.Label>Qunatity Needed*</Form.Label>
+                          <Form.Control type="quantity" placeholder="3" />
+                      </Form.Group>
+                    </div>
+                
+          
+               </Col>
+               <Col xs={12}md={6} lg={3}>
+              
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Example textarea</Form.Label>
+                <Form.Control as="textarea" rows="3" />
+              </Form.Group>
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Pickup date?</Form.Label>
+                <DatePicker />
+              </Form.Group>
+           
+               </Col>
+               <Col xs={12}md={12} lg={2}>
+                  <Button className="bg-orange">Get a Quote!</Button>
+               </Col>
+             </Form>       
            </Container>
   
            <Container className="mt-5 mb-5 p-2 pb-5 pt-5" >

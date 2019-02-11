@@ -9,6 +9,9 @@ import fbLogo from '../img/facebook.svg';
 import igLogo from '../img/instagram-logo.svg';
 import yelpLogo from '../img/yelp-logo.svg';
 
+import sampleImg from '../img/hero/Site_Hero_2_BLUEJAY.png'
+import sampleImg2 from '../img/hero/Site_Hero_4_BLUEJAY.png'
+
 
 export default class ServicePage extends React.Component {
   render() {
@@ -78,7 +81,7 @@ export default class ServicePage extends React.Component {
          <Container className="mt-5 mb-5 p-2 pb-5 pt-5" >
            <Row>
              <Col xs={12} md={6}>
-               <Image fluid src="http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_1_BLUEJAY.png"  />
+               <Image fluid src={sampleImg} />
              </Col>
 
              <Col xs={12} md={6} className="pl-5">
@@ -113,7 +116,7 @@ export default class ServicePage extends React.Component {
              </Col>
 
              <Col xs={12} md={6}>
-               <Image fluid src="http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_1_BLUEJAY.png"  />
+               <Image fluid src={sampleImg2}  />
              </Col>
            </Row>       
          </Container>

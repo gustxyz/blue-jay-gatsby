@@ -22,22 +22,22 @@ export default class IndexPage extends React.Component {
            {/*NAV*/}
            <Navbar fixed="top" className="pt-3" expand="lg">
          
-         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-         <Navbar.Collapse id="basic-navbar-nav">
-           <Nav className="mr-auto ml-5 pl-3">
-               <Link className="page-link" to="/about">
-                 About
-               </Link>
-               <Link className="page-link" to="/services">
-                 Services
-               </Link>
-           
-               <Link className="page-link" to="/contact">
-                 Contact
-               </Link>
-           </Nav>
-         </Navbar.Collapse>
-       </Navbar>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto ml-5 pl-3">
+                  <Link className="page-link" to="/about">
+                    About
+                  </Link>
+                  <Link className="page-link" to="/services">
+                    Services
+                  </Link>
+              
+                  <Link className="page-link" to="/contact">
+                    Contact
+                  </Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
           {/* HEADER */}
           
 
@@ -48,7 +48,6 @@ export default class IndexPage extends React.Component {
                 <Link className="page-link bj-header-logo" to="/">
                     <img src={bluejayLogo} />
                 </Link>
-
                   <h1 className="text-center text-white pt-25-vh">Who is Blue Jay?</h1>
                   <p>Let's share your dreams with the world</p>
                   <br />

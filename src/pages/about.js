@@ -8,6 +8,7 @@ import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
 import fbLogo from '../img/facebook.svg';
 import igLogo from '../img/instagram-logo.svg';
 import yelpLogo from '../img/yelp-logo.svg';
+import sampleImg from '../img/hero/Site_Hero_1_BLUEJAY.png';
 
 
 export default class AboutPage extends React.Component {
@@ -76,7 +77,7 @@ export default class AboutPage extends React.Component {
             <Container className="mt-5 mb-5 p-2" >
               <Row>
                 <Col xs={12} md={6}>
-                  <Image fluid src="http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_1_BLUEJAY.png"  />
+                  <Image fluid src={sampleImg}  />
                 </Col>
 
                 <Col xs={12} md={6} className="pl-5">
