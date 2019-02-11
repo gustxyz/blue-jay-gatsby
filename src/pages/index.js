@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 
 import { Navbar, Nav, Jumbotron, Button, ButtonToolbar, Dropdown, DropdownButton, Image, Container, Row, Col } from 'react-bootstrap';
-import Coverflow from 'react-coverflow';
 import {StyleRoot} from "radium";
 import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
 import fbLogo from '../img/facebook.svg';
