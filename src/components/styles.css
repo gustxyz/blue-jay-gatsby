@@ -4,6 +4,10 @@
     font-family: 'Century Gothic', sans-serif;
 }
 
+body {
+    overflow: hidden;
+}
+
 /**Bootstrap overrides**/
 .btn-primary {
     border: none;
