@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import {  Navbar, Nav, Button, Image, Container, Row, Col } from 'react-bootstrap';
-import Radium, {StyleRoot} from "radium";
 
 import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
 import fbLogo from '../img/facebook.svg';
