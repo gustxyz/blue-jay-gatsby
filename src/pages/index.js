@@ -33,9 +33,7 @@ export default class IndexPage extends React.Component {
                <Link className="page-link" to="/services">
                  Services
                </Link>
-               <Link className="page-link" to="/blog">
-                 Blog
-               </Link>
+           
                <Link className="page-link" to="/contact">
                  Contact
                </Link>
@@ -120,7 +118,7 @@ export default class IndexPage extends React.Component {
             </Container>
 
             {/* Testimonials */}
-              <StyleRoot>
+              {/* <StyleRoot>
                   <Coverflow
                         displayQuantityOfSide={2}
                         enableScroll={false}
@@ -142,7 +140,7 @@ export default class IndexPage extends React.Component {
                         <img src='images/album-2.png' alt='Album two' data-action="http://passer.cc"/>
                         <img src='images/album-3.png' alt='Album three' data-action="https://doce.cc/"/>
                   </Coverflow>
-                </StyleRoot>
+                </StyleRoot> */}
             
        
 

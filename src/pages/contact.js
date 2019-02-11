@@ -30,9 +30,7 @@ export default class ContactPage extends React.Component {
                  <Link className="page-link" to="/services">
                    Services
                  </Link>
-                 <Link className="page-link" to="/blog/2016-12-17-making-sense-of-the-scaas-new-flavor-wheel/">
-                   Blog
-                 </Link>
+                
                  <Link className="page-link" to="/contact">
                    Contact
                  </Link>
