@@ -46,7 +46,7 @@ export default class ContactPage extends React.Component {
          <div className="view-height-75 bg-orange position-relative" >
     
            <h1 className="text-center text-white pt-25-vh">Our Services</h1>
-           <Link className="page-link bj-header-logo" to="/index">
+           <Link className="page-link bj-header-logo" to="/">
                <img src={bluejayLogo} />
            </Link>
       

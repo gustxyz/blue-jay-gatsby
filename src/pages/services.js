@@ -45,7 +45,7 @@ export default class ServicePage extends React.Component {
        <div className="view-height-75 bg-blue position-relative" >
   
          <h1 className="text-center text-white pt-25-vh">Our Services</h1>
-         <Link className="page-link bj-header-logo" to="/index">
+         <Link className="page-link bj-header-logo pt-5" to="/">
              <img src={bluejayLogo} />
          </Link>
     

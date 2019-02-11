@@ -49,7 +49,7 @@ export default class IndexPage extends React.Component {
             <Container >
               <Row >
                 <Col xs={6} md={10} lg={12} className="">
-                <Link className="page-link bj-header-logo" to="/index">
+                <Link className="page-link bj-header-logo" to="/">
                     <img src={bluejayLogo} />
                 </Link>
 

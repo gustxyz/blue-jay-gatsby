@@ -44,7 +44,7 @@ export default class AboutPage extends React.Component {
           <div className="view-height-75 bg-green position-relative" >
      
             <h1 className="text-center text-white pt-25-vh">Who is Blue Jay?</h1>
-            <Link className="page-link bj-header-logo" to="/index">
+            <Link className="page-link bj-header-logo" to="/">
                 <img src={bluejayLogo} />
             </Link>
        
