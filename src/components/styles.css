@@ -1,23 +1,134 @@
 
 
 *{
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+
+/**COLORS**/
+.bg-gray {
+    background: rgb(246,247,249);
+}
+
+.bg-blue {
+    background: rgb(76, 177, 221);
+}
+.bg-blue , .btn-primary:hover {
+    background: rgb(76, 177, 221) !important;
+}
+.text-color-blue {
+    color: rgb(96,169,214);
+}
+.text-color-dark-blue {
+    color: rgb(54,104,137);
+}
+
+
+.bg-orange {
+    background: rgb(203,143,75);
+}
+.bg-orange , .btn-primary:hover {
+    background: rgb(203,143,75) !important;
+}
+.text-color-orange {
+    color: rgb(203,143,75);
+}
+
+
+.bg-green {
+    background: rgb(115,203,140);
+}
+.bg-green , .btn-primary:hover {
+    background: rgb(115,203,140) !important;
+}
+.text-color-green {
+    color: rgb(115,203,140);
+}
+
+
+.btn-primary {
+    border: none;
+    transition: all .1s;
+    display: block;
+}
+.btn-primary:hover {
+    opacity: .8;
+    transform: translateY(-3px);
+    background: none;
 }
 
 
 
 
 
-
-
-
-
-
-
-.jumbotron {
-    background: #8998ae;
+/**SNIPPETS**/
+.view-height-50 {
+    height: 50vh;
+}
+.view-height-75 {
+    height: 75vh;
+}
+.neg-m-top-30 {
+    margin-top: -30px; 
+}
+.pt-25-vh {
+    padding-top: 25vh;
+}
+.line-height-3 {
+    line-height: 3;
+}
+.mt-n10 {
+    margin-top: -8rem !important;
 }
 
-.work-sale {
-    background-image: url("http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_4_BLUEJAY.png")
+
+/**CUSTOM**/
+.home-header-bg-image {
+    background: url('../img/Background.png') no-repeat center center;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+.blurb {
+    border-radius: 4px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.bj-header-logo {
+    position: absolute;
+    left: 80%;
+    top: 20%;
+    z-index: 2000;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 900px)  {
+    .bj-header-logo {
+        text-align: center;
+        top: 10%;
+        left: 80%;
+    }
+    .bj-header-logo img {
+        width: 50px;   
+    }
+}
+
+
+.page-link {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    transition: all .2s;
+}
+.page-link:hover{
+    opacity:.6;
+    background: none;
+}
+
