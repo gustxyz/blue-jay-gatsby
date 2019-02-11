@@ -4,6 +4,18 @@
     font-family: 'Century Gothic', sans-serif;
 }
 
+/**Bootstrap overrides**/
+.btn-primary {
+    border: none;
+    transition: all .1s;
+    display: block;
+}
+.btn-primary:hover {
+    opacity: .8;
+    transform: translateY(-3px);
+    background: none;
+}
+
 
 /**COLORS**/
 .bg-gray {
@@ -46,16 +58,6 @@
 }
 
 
-.btn-primary {
-    border: none;
-    transition: all .1s;
-    display: block;
-}
-.btn-primary:hover {
-    opacity: .8;
-    transform: translateY(-3px);
-    background: none;
-}
 
 
 
