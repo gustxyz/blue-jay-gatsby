@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-
 import { Navbar, Nav, Jumbotron, Button, ButtonToolbar, Dropdown, DropdownButton, Image, Container, Row, Col } from 'react-bootstrap';
-import {StyleRoot} from "radium";
+
 import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
 import fbLogo from '../img/facebook.svg';
 import igLogo from '../img/instagram-logo.svg';
