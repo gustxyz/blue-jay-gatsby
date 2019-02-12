@@ -21,6 +21,9 @@ import graphicdesignImg from '../img/services/graphicdesign-img.png';
 import screenprintImg from '../img/services/screenprint-img.png';
 import webmediaImg from '../img/services/webmedia-img.png';
 
+import sampleImg from '../img/hero/Site_Hero_2_BLUEJAY.png'
+import sampleImg2 from '../img/hero/Site_Hero_4_BLUEJAY.png'
+
 
 export default class ServicePage extends React.Component {
   render() {

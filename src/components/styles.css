@@ -4,6 +4,10 @@
     font-family: 'Century Gothic', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Secondary Font */
 
 .font-georgia {
@@ -179,6 +183,8 @@
     padding-bottom: 30px;
     padding-left: 80px;
     padding-right: 80px;
+    z-index: 1000;
+    position: relative;
 }
 
 .bj-header-logo {
@@ -215,6 +221,11 @@
 .page-link:hover{
     opacity:.6;
     background: none;
+}
+
+.contact-input-sidebyside {
+    width: 45%;
+    float: left;
 }
 
 .logo-margin {
