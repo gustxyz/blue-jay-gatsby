@@ -5,10 +5,10 @@ import Layout from '../components/Layout';
 import {  Form, Navbar, Nav, Button, Image, Container, Row, Col } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
-import fbLogo from '../img/facebook.svg';
-import igLogo from '../img/instagram-logo.svg';
-import yelpLogo from '../img/yelp-logo.svg';
+import bluejayLogo from '../img/logos/BLUEJAY_VECTOR.svg';
+import fbLogo from '../img/logos/facebook.svg';
+import igLogo from '../img/logos/instagram-logo.svg';
+import yelpLogo from '../img/logos/yelp-logo.svg';
 
 
 
