@@ -4,12 +4,16 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import { Navbar, Nav, Jumbotron, Button, ButtonToolbar, Dropdown, DropdownButton, Image, Container, Row, Col } from 'react-bootstrap';
 
-import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
-import fbLogo from '../img/facebook.svg';
-import igLogo from '../img/instagram-logo.svg';
-import yelpLogo from '../img/yelp-logo.svg';
+import bluejayLogo from '../img/logos/BLUEJAY_VECTOR.svg';
+import fbLogo from '../img/logos/facebook.svg';
+import igLogo from '../img/logos/instagram-logo.svg';
+import yelpLogo from '../img/logos/yelp-logo.svg';
 
-
+import diedrichIcon from '../img/customer_icons/diedrich-icon.svg';
+import gymeastIcon from '../img/customer_icons/gymeast-icon.svg';
+import inkdIcon from '../img/customer_icons/inkd-icon.svg';
+import stillyIcon from '../img/customer_icons/stilly-icon.svg';
+import togglesIcon from '../img/customer_icons/toggles-icon.svg';
 
 
 export default class IndexPage extends React.Component {
@@ -19,62 +23,61 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout >
-           {/*NAV*/}
-           <Navbar fixed="top" className="pt-3" expand="lg">
-         
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto ml-5 pl-3">
-                  <Link className="page-link" to="/about">
-                    About
-                  </Link>
-                  <Link className="page-link" to="/services">
-                    Services
-                  </Link>
-              
-                  <Link className="page-link" to="/contact">
-                    Contact
-                  </Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-          {/* HEADER */}
-          
+        {/*NAV*/}
+         <Navbar fixed="top" className="pt-3" expand="lg">
+         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+         <Navbar.Collapse id="basic-navbar-nav">
+           <Nav className="mr-auto ml-5 pl-3">
+               <Link className="page-link" to="">
+                 Home
+               </Link>
+               <Link className="page-link" to="/about">
+                 About
+               </Link>
+               <Link className="page-link" to="/services">
+                 Services
+               </Link>
+               <Link className="page-link" to="/contact">
+                 Contact
+               </Link>
+           </Nav>
+         </Navbar.Collapse>
+       </Navbar>
 
-          <div className="view-height-75 position-relative home-header-bg-image ">
-            <Container >
-              <Row >
-                <Col xs={6} md={10} lg={12} className="">
-                <Link className="page-link bj-header-logo" to="/">
+
+          {/* HEADER */}
+          <div className="view-height-75 position-relative home-header-bg-image">
+            <Container fluid>
+              <Row>
+              <Col className="text-right logo-margin">
+              <Link to="/">
                     <img src={bluejayLogo} />
-                </Link>
-                  <h1 className="text-center text-white pt-25-vh">Who is Blue Jay?</h1>
-                  <p>Let's share your dreams with the world</p>
-                  <br />
+              </Link>
+              </Col>
+              </Row>
+              <Row>
+                <Col xs={6} md={10} lg={12} className="offset-md-2">
+                  <h1 className="text-left text-white display-3">Blue Jay Screen Printing</h1>
+                  <h2 className="text-white font-size-2rem font-georgia">Let's share your dreams with the world.</h2>
                   <br />
                 </Col>
               </Row>
-              <Row>
-                <Col xs lg="2">
-                <Button className="bj-want">I want to...</Button>
-                </Col>
-                  <Col xs lg="2">
+              <Row className="pt-10-vh">
+                <Col xs={6} md={10} lg={12} className="offset-md-2">
+                <ButtonToolbar>
+                <Button className="dbl-font-size text-color-blue">I want to...</Button>
                     <DropdownButton title="Print">
                       <Dropdown.Item eventKey="1">Print</Dropdown.Item>
                       <Dropdown.Item eventKey="2">Embroider</Dropdown.Item>
                       <Dropdown.Item eventKey="3">Customize
                       </Dropdown.Item>
                     </DropdownButton>
-                  </Col>
-                  <Col xs lg="2">
                     <DropdownButton title="25-50">
                       <Dropdown.Item eventKey="1">25-50</Dropdown.Item>
                       <Dropdown.Item eventKey="2">50-200</Dropdown.Item>
                       <Dropdown.Item eventKey="3">200+
                       </Dropdown.Item>
                     </DropdownButton>
-                  </Col>
-                  <Col xs lg="2">
                     <DropdownButton title="Shirts">
                       <Dropdown.Item eventKey="1">Shirts</Dropdown.Item>
                       <Dropdown.Item eventKey="2">Hoodies</Dropdown.Item>
@@ -82,106 +85,123 @@ export default class IndexPage extends React.Component {
                       <Dropdown.Item eventKey="3">Hats
                       </Dropdown.Item>
                     </DropdownButton>
-                  </Col>
-                  <Col xs lg="2" className="no-padding">
-                    <Button className="bj-want-request">Send Request</Button>
-                    </Col>
-                  <Col xs lg="2" className="no-padding">
-                    <Button className="bj-want-request-else">Something else?</Button>
+                    <Button className="dbl-font-size text-color-blue btn-right-margin" >Send Request</Button>
+                    <a className="btn btn-primary dbl-font-size text-color-blue" href="/services">Need something else?</a>
+                    </ButtonToolbar>
                   </Col>
                 </Row>
             </Container>
           </div>
 
 
-            {/* CREATE/CONTACT */}
+            {/* Intro */}
             <Container>
               <Row>
-                <Col xs={12} md={6}>
-                  <Jumbotron>
-                      <Image fluid src="http://thebluejaygroup.com/gatsby/img/hero/Site_Hero_1_BLUEJAY.png" roundedCircle />
-                  </Jumbotron>
-                </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={12}>
                     <Jumbotron>
-                      <h1 >Title Text</h1>
-                      <p >Subtitle Text</p>
-                      <Button className="ml-auto">Send Request</Button>
+                      <h1 className="text-color-blue">WE'RE MAKING MOVES</h1>
+                      <p >We've recently upgraded our equipment, processes, services, and moved into a new 3,000 Sq Ft facility -
+                      all in order to serve you better. We are able to invest in quality thanks to customers like you,
+                      and hope to give it right back on your next order with us.
+                      Whether that's custom apparel, web media, or original graphic design, we've got you covered.
+                      Let's get to work!</p>
+                      <a className="btn btn-primary bg-blue" href="/about">Learn More</a>
                   </Jumbotron>
                 </Col>
-        
               </Row>
-    
+
+            {/*CUSTOMERS*/}
+             <Row>
+            <h1 className="text-color-blue">HAPPY CUSTOMERS</h1>
+             <Col xs={4} md={10} lg={12}>
+                <div className="service-icon">
+                <a className="page-link" href="http://www.stillaguamish.com/" target="new">
+                  <img src={stillyIcon} />
+                </a>
+                  <h6 className="font-georgia text-center">Stillaguamish Tribe</h6>
+                </div>
+
+                <div className="service-icon screen-service-icon">
+                  <a className="page-link" href="http://www.gymeast.com/" target="new">
+                    <img src={gymeastIcon} />
+                  </a>
+                   <h6 className="font-georgia text-center">Gym East Bellevue</h6>
+                </div>
+
+                <div className="service-icon screen-service-icon">
+                  <a className="page-link" href="https://www.diedrichespresso.com/" target="new">
+                    <img src={diedrichIcon} />
+                  </a>
+                   <h6 className="font-georgia text-center">Diedrich Espresso</h6>
+                </div>
+
+                <div className="service-icon">
+                  <a className="page-link" href="https://inkdathletes.bigcartel.com/" target="new">
+                    <img src={inkdIcon} />
+                  </a>
+                   <h6 className="font-georgia text-center">Inkd Athletes</h6>
+                </div>
+
+                <div className="service-icon">
+                  <a className="page-link" href="http://www.togglesbottleshop.com/" target="new">
+                    <img src={togglesIcon} />
+                  </a>
+                   <h6 className="font-georgia text-center">Toggles Bottle Shop</h6>
+                </div>
+             </Col>
+           </Row>
             </Container>
 
-            {/* Testimonials */}
-              {/* <StyleRoot>
-                  <Coverflow
-                        displayQuantityOfSide={2}
-                        enableScroll={false}
-                        navigation
-                        infiniteScroll
-                        enableHeading
-                        media={{
-                          '@media (max-width: 900px)': {
-                            // width: '100vw',
-                            height: '300px'
-                          },
-                          '@media (min-width: 900px)': {
-                            width: '100vw',
-                            height: '600px'
-                          }
-                        }}
-                      >
-                        <img src='images/album-1.png' alt='Album one' data-action="https://facebook.github.io/react/"/>
-                        <img src='images/album-2.png' alt='Album two' data-action="http://passer.cc"/>
-                        <img src='images/album-3.png' alt='Album three' data-action="https://doce.cc/"/>
-                  </Coverflow>
-                </StyleRoot> */}
-            
-       
 
-
-            {/* Footer */}
-             <Container fluid className="bg-blue pt-3">
-              <Row>
-                <Col xs={12} md={2} className="offset-md-2 text-center"> 
-                    <a className="page-link">
-                      <img src={bluejayLogo} />
-                    </a>
-                </Col>
-                <Col xs={12} md={4} className="d-flex flex-column justify-content-around" >    
-                    <div className="d-flex justify-content-center">
-                        <a className="page-link">
+           {/* Footer */}
+           {/* LOGO */}
+           <Container fluid className="bg-blue pt-3">
+             <Row className="align-items-center footer-margin">
+               <Col xs={12} md={2} className="justify-content-start">
+                   <a className="page-link">
+                     <img src={bluejayLogo} />
+                   </a>
+               </Col>
+              {/*SOCIAL*/}
+               <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
+                   <div className="d-flex justify-content-center">
+                        <a className="page-link" href="https://www.facebook.com/bluejayscreenprinting">
                           <img src={fbLogo}/>
                         </a>
-                        <a className="ml-2 page-link">
+                        <a className="ml-2 page-link" href="https://www.instagram.com/bluejayscreenprinting">
                           <img  src={igLogo}/>
                         </a>
-                        <a className="ml-2 page-link">
+                        <a className="ml-2 page-link" href="https://www.yelp.com/biz/blue-jay-screen-printing-marysville">
                           <img  src={yelpLogo}/>
                         </a>
                     </div>
-                    <div className="d-flex mx-5 justify-content-around ">
-                      <Link className="page-link" to="/about">
-                        About
-                      </Link>
-                      <Link className="page-link" to="/services">
-                        Services
-                      </Link>
-                      <Link className="page-link" to="/design">
-                        Design
-                      </Link>
-                      <Link className="page-link" to="/contact">
-                        Contact
-                      </Link>
-                    </div>
-                </Col>
-                <Col xs={12} md={8} className="offset-md-2 text-white text-center" > 
-                        <p>All content copyright 2019. Blue Jay Screenprinting. All rights reserved.</p>
-                </Col>           
-              </Row>
-          </Container>
+               </Col>
+             {/*SITE MAP*/}
+               <Col xs={12} md={2}>
+                   <div className="justify-content-end text-right">
+                    <Link className="page-link" to="/">
+                       Home
+                     </Link>
+                     <Link className="page-link" to="/about">
+                       About
+                     </Link>
+                     <Link className="page-link" to="/services">
+                       Services
+                     </Link>
+                     <Link className="page-link" to="/contact">
+                       Contact
+                     </Link>
+                   </div>
+               </Col>
+             </Row>
+             <Row>
+             <Col xs={12} md={12} className="justify-content-center">
+                <div className="text-white text-center">
+                  <p className="mt-auto">Blue Jay Screen Printing © 2019 All rights reserved.</p>
+                </div>
+              </Col>
+             </Row>
+         </Container>
       </Layout>
     )
   }

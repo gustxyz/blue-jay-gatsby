@@ -8,16 +8,36 @@ body {
     overflow-x: hidden;
 }
 
+/* Secondary Font */
+
+.font-georgia {
+    font-family: 'Georgia', serif;
+}
+
+
 /**Bootstrap overrides**/
 .btn-primary {
-    border: none;
+    border-radius: 0px;
+    border-width: 0px;
+    background: #ffffff;
     transition: all .1s;
-    display: block;
+    display: inline-block;
+    font-size: 1rem;
 }
 .btn-primary:hover {
     opacity: .8;
     transform: translateY(-3px);
     background: none;
+}
+.btn-right-margin {
+    margin-right: 1rem;
+}
+.dropdown-toggle {
+    font-size: 1.5rem;
+    border-width: 0px;
+    background: none;
+    color: #ffffff;
+    margin: 0 1rem 0 1rem;
 }
 
 
@@ -26,11 +46,15 @@ body {
     background: rgb(246,247,249);
 }
 
+.bg-white {
+    background: rgb(255,255,255);
+}
+
 .bg-blue {
-    background: rgb(76, 177, 221);
+    background: rgb(0, 179, 227);
 }
 .bg-blue , .btn-primary:hover {
-    background: rgb(76, 177, 221) !important;
+    background: rgb(0, 179, 227) !important;
 }
 .text-color-blue {
     color: rgb(96,169,214);
@@ -41,31 +65,34 @@ body {
 
 
 .bg-orange {
-    background: rgb(203,143,75);
+    background: rgb(240,143,75);
 }
 .bg-orange , .btn-primary:hover {
-    background: rgb(203,143,75) !important;
+    background: rgb(240,143,75) !important;
 }
 .text-color-orange {
-    color: rgb(203,143,75);
+    color: rgb(240,143,75);
 }
 
+.bg-purp {
+    background: rgb(200,80,200);
+}
+.bg-purp , .btn-primary:hover {
+    background: rgb(200,80,200) !important;
+}
+.text-color-purp {
+    color: rgb(200,80,200);
+}
 
 .bg-green {
-    background: rgb(115,203,140);
+    background: rgb(115,220,100);
 }
 .bg-green , .btn-primary:hover {
-    background: rgb(115,203,140) !important;
+    background: rgb(115,220,100) !important;
 }
 .text-color-green {
     color: rgb(115,203,140);
 }
-
-
-
-
-
-
 
 /**SNIPPETS**/
 .view-height-50 {
@@ -75,7 +102,10 @@ body {
     height: 75vh;
 }
 .neg-m-top-30 {
-    margin-top: -30px; 
+    margin-top: -30px;
+}
+.pt-10-vh {
+    padding-top: 10vh;
 }
 .pt-25-vh {
     padding-top: 25vh;
@@ -86,12 +116,61 @@ body {
 .mt-n10 {
     margin-top: -8rem !important;
 }
-
+.dbl-font-size {
+    font-size: 1.5rem;
+}
 
 /**CUSTOM**/
 .home-header-bg-image {
-    background: url('../img/Background.png') no-repeat center center;
+    background: linear-gradient(
+      to bottom right,
+      rgba(0, 179, 227, 1),
+      rgba(0, 179, 227, 0.7)),
+    url('../img/hero/shop_photo_3.jpg') no-repeat center center;
+
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-header-bg-image {
+    background: linear-gradient(
+      to bottom right,
+      rgba(115,220,100, 1),
+      rgba(115,220,100, 0.6)),
+    url('../img/hero/shop_photo_2.jpg') no-repeat center center;
+
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.services-header-bg-image {
+    background: linear-gradient(
+      to bottom right,
+      rgba(200,80,200, 1),
+      rgba(200,80,200, 0.6)),
+    url('../img/hero/pantone_book.jpg') no-repeat center center;
+
     background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contact-header-bg-image {
+    background: linear-gradient(
+      to bottom right,
+      rgba(240,143,75, .8),
+      rgba(240,143,75, 0.6)),
+    url('../img/hero/shop_photo_4.jpg') no-repeat center center;
+
+    background-position: 50% 30%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -127,7 +206,7 @@ body {
         left: 80%;
     }
     .bj-header-logo img {
-        width: 50px;   
+        width: 50px;
     }
 }
 
@@ -149,3 +228,24 @@ body {
     float: left;
 }
 
+.logo-margin {
+    margin: 2rem;
+}
+
+.footer-margin {
+    margin: 1rem 1rem 0 1rem;
+}
+
+.service-icon {
+    width: 170px;
+    margin: 1rem;
+    display: inline-block;
+}
+.screen-service-icon {
+    width: 210px;
+}
+
+.about-copy-bg {
+    background: url('../img/hero/hat_shot.png') no-repeat center bottom;
+    background-size: cover;
+}

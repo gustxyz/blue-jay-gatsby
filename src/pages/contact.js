@@ -5,39 +5,42 @@ import Layout from '../components/Layout';
 import {  Form, Navbar, Nav, Button, Image, Container, Row, Col } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import bluejayLogo from '../img/BLUEJAY_VECTOR.svg';
-import fbLogo from '../img/facebook.svg';
-import igLogo from '../img/instagram-logo.svg';
-import yelpLogo from '../img/yelp-logo.svg';
+import bluejayLogo from '../img/logos/BLUEJAY_VECTOR.svg';
+import fbLogo from '../img/logos/facebook.svg';
+import igLogo from '../img/logos/instagram-logo.svg';
+import yelpLogo from '../img/logos/yelp-logo.svg';
 
 
 
 export default class ContactPage extends React.Component {
     render() {
-   
+
       return (
         <Layout >
-  
+
               {/*NAV*/}
-            <Navbar fixed="top" className="bg-orange pt-3" expand="lg">
-           
+            <Navbar fixed="top" className="pt-3" expand="lg">
+
            <Navbar.Toggle aria-controls="basic-navbar-nav" />
            <Navbar.Collapse id="basic-navbar-nav">
              <Nav className="mr-auto ml-5 pl-3">
+                  <Link className="page-link" to="">
+                    Home
+                  </Link>
                  <Link className="page-link" to="/about">
                    About
                  </Link>
                  <Link className="page-link" to="/services">
                    Services
                  </Link>
-                
+
                  <Link className="page-link" to="/contact">
                    Contact
                  </Link>
              </Nav>
            </Navbar.Collapse>
          </Navbar>
-  
+
          {/* HEADER */}
   
         
@@ -145,79 +148,82 @@ export default class ContactPage extends React.Component {
                </Col>
              </Form>       
            </Container>
-  
+
            <Container className="mt-5 mb-5 p-2 pb-5 pt-5" >
              <Row>
-             
-  
+
+
                <Col xs={12}  className="pl-5">
-                 <h2 className="text-color-orange text-left">Getting a quote relevant copy</h2>
-                 <p className="">Here at Blue Jay Screen Printing we can ctake your oder for
-                   25 family reunion shirts to 950 sweatshirts with your logo on them. We work
-                   hand in hand with you, the client, to make sure you are getting the quality you need,
-                   along with competitive pricing and roudn the clock customer service. No matter 
-                   how big your order is we can acomplish any task with a quick turnaround time and
-                   quality, soft hand prints.
+                 <h2 className="text-color-orange text-left">Getting a quote?</h2>
+                 <p className="">Here's some helpful information you should have for us up front so
+                   we don't waste 2 weeks emailing eachother.</p>
+                   <p> We offer high-quality screen printing on shirts, tanks, tees, and hats.
+                   We specialize in larger quantity orders of 25 and up to 1,000+.
+                   If you're looking for good quality and great customer service look no further.
                  </p>
-                 <Button className="bg-orange ml-auto pl-4 pr-4">Order Embroidery</Button>
+                 <Button className="bg-orange ml-auto pl-4 pr-4">Give us the cash</Button>
                </Col>
-             </Row>       
+             </Row>
            </Container>
-  
-  
-  
-  
-           
-  
-  
-  
+
+
+
+
            {/* Footer */}
+           {/* LOGO */}
            <Container fluid className="bg-orange pt-3">
-             <Row>
-               <Col xs={12} md={2} className="offset-md-2 text-center"> 
+             <Row className="align-items-center footer-margin">
+               <Col xs={12} md={2} className="justify-content-start">
                    <a className="page-link">
                      <img src={bluejayLogo} />
                    </a>
                </Col>
-               <Col xs={12} md={4} className="d-flex flex-column justify-content-around" >    
+              {/*SOCIAL*/}
+               <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
                    <div className="d-flex justify-content-center">
-                       <a className="page-link">
-                         <img src={fbLogo}/>
-                       </a>
-                       <a className="ml-2 page-link">
-                         <img src={igLogo}/>
-                       </a>
-                       <a className="ml-2 page-link">
-                         <img src={yelpLogo}/>
-                       </a>
-                   </div>
-                   <div className="d-flex mx-5 justify-content-around ">
+                        <a className="page-link" href="https://www.facebook.com/bluejayscreenprinting">
+                          <img src={fbLogo}/>
+                        </a>
+                        <a className="ml-2 page-link" href="https://www.instagram.com/bluejayscreenprinting">
+                          <img  src={igLogo}/>
+                        </a>
+                        <a className="ml-2 page-link" href="https://www.yelp.com/biz/blue-jay-screen-printing-marysville">
+                          <img  src={yelpLogo}/>
+                        </a>
+                    </div>
+               </Col>
+             {/*SITE MAP*/}
+               <Col xs={12} md={2}>
+                   <div className="justify-content-end text-right">
+                    <Link className="page-link" to="/">
+                       Home
+                     </Link>
                      <Link className="page-link" to="/about">
                        About
                      </Link>
                      <Link className="page-link" to="/services">
                        Services
                      </Link>
-                     <Link className="page-link" to="/design">
-                       Design
-                     </Link>
                      <Link className="page-link" to="/contact">
                        Contact
                      </Link>
                    </div>
                </Col>
-               <Col xs={12} md={8} className="offset-md-2 text-white text-center" > 
-                       <p>All content copyright 2019. Blue Jay Screenprinting. All rights reserved.</p>
-               </Col>           
+             </Row>
+             <Row>
+             <Col xs={12} md={12} className="justify-content-center">
+                <div className="text-white text-center">
+                  <p className="mt-auto">Blue Jay Screen Printing © 2019 All rights reserved.</p>
+                </div>
+              </Col>
              </Row>
          </Container>
-  
-            
+
         </Layout>
       )
     }
   }
-  
+
     ContactPage.propTypes = {
     data: PropTypes.shape({
       allMarkdownRemark: PropTypes.shape({
@@ -225,7 +231,7 @@ export default class ContactPage extends React.Component {
       }),
     }),
   }
-  
+
   export const pageQuery = graphql`
     query ContactQuery {
       allMarkdownRemark(
@@ -249,4 +255,3 @@ export default class ContactPage extends React.Component {
       }
     }
   `
-  
