@@ -67,7 +67,7 @@ export default class IndexPage extends React.Component {
                 <ButtonToolbar>
                     <div className="pl-3 pr-3 ml-auto gray-border-right bg-white toolbar-left">I want to...</div>
                     <form name="contact" method="post" data-netlify="true"  className="d-flex">
-    
+                    <input type="hidden" name="form-name" value="contact" />
                         <select name="role[]" className=" gray-border-right dropdown-toggle btn btn-primary home-contact-button" >
                           <option value="leader">print</option>
                           <option value="leader">2</option>
