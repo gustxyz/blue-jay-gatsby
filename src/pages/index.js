@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import { Navbar, Nav, Jumbotron, Button, ButtonToolbar, Dropdown, DropdownButton, Image, Container, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Jumbotron, Button, ButtonToolbar, Form, DropdownButton, Image, Container, Row, Col } from 'react-bootstrap';
 
 import bluejayLogo from '../img/logos/BLUEJAY_VECTOR.svg';
 import fbLogo from '../img/logos/facebook.svg';
@@ -63,30 +63,40 @@ export default class IndexPage extends React.Component {
                 </Col>
               </Row>
               <Row className="pt-10-vh">
-                <Col xs={6} md={10} lg={12} className="offset-md-2">
+                <Col xs={6} md={7} lg={7} className="offset-lg-1">
                 <ButtonToolbar>
-                <Button className="dbl-font-size text-color-blue">I want to...</Button>
-                    <DropdownButton title="Print">
-                      <Dropdown.Item eventKey="1">Print</Dropdown.Item>
-                      <Dropdown.Item eventKey="2">Embroider</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">Customize
-                      </Dropdown.Item>
-                    </DropdownButton>
-                    <DropdownButton title="25-50">
-                      <Dropdown.Item eventKey="1">25-50</Dropdown.Item>
-                      <Dropdown.Item eventKey="2">50-200</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">200+
-                      </Dropdown.Item>
-                    </DropdownButton>
-                    <DropdownButton title="Shirts">
-                      <Dropdown.Item eventKey="1">Shirts</Dropdown.Item>
-                      <Dropdown.Item eventKey="2">Hoodies</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">Pants</Dropdown.Item>
-                      <Dropdown.Item eventKey="3">Hats
-                      </Dropdown.Item>
-                    </DropdownButton>
-                    <Button className="dbl-font-size text-color-blue btn-right-margin" >Send Request</Button>
-                    <a className="btn btn-primary dbl-font-size text-color-blue" href="/services">Need something else?</a>
+                    <div className="pl-3 pr-3 ml-auto gray-border-right bg-white toolbar-left">I want to...</div>
+                    <form name="contact" method="post" data-netlify="true"  className="d-flex">
+    
+                        <select name="role[]" className=" gray-border-right dropdown-toggle btn btn-primary home-contact-button" >
+                          <option value="leader">print</option>
+                          <option value="leader">2</option>
+                          <option value="leader">3</option>
+                          <option value="leader">4</option>
+                          <option value="leader">5</option>
+                        </select>
+                  
+
+                        <select name="test[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                          <option value="leader">25</option>
+                          <option value="leader">2</option>
+                          <option value="leader">3</option>
+                          <option value="leader">4</option>
+                          <option value="leader">5</option>
+                        </select>
+                      
+
+                        <select name="test1[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                          <option value="leader">shirts</option>
+                          <option value="leader">2</option>
+                          <option value="leader">3</option>
+                          <option value="leader">4</option>
+                          <option value="leader">5</option>
+                        </select>
+                 
+                        <Button type="submit" className="ml-2 toolbar-send-request mr-auto toolbar-right" >Send Request</Button>
+
+                    </form>
                     </ButtonToolbar>
                   </Col>
                 </Row>
