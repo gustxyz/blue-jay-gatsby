@@ -67,31 +67,26 @@ export default class IndexPage extends React.Component {
                 <ButtonToolbar>
                     <div className="pl-3 pr-3 ml-auto gray-border-right bg-white toolbar-left">I want to...</div>
                     <form name="contact" method="post" data-netlify="true"  className="d-flex">
-                    <input type="hidden" name="form-name" value="contact" />
-                        <select name="role[]" className=" gray-border-right dropdown-toggle btn btn-primary home-contact-button" >
-                          <option value="leader">print</option>
-                          <option value="leader">2</option>
-                          <option value="leader">3</option>
-                          <option value="leader">4</option>
-                          <option value="leader">5</option>
+                    <input type="hidden" name="form-name" value="home-page" />
+                        <select name="job[]" className=" gray-border-right dropdown-toggle btn btn-primary home-contact-button" >
+                          <option value="print">print</option>
+                          <option value="embroider">embroider</option>
+                          <option value="custom">custom</option>
                         </select>
                   
 
-                        <select name="test[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
-                          <option value="leader">25</option>
-                          <option value="leader">2</option>
-                          <option value="leader">3</option>
-                          <option value="leader">4</option>
-                          <option value="leader">5</option>
+                        <select name="quantity[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                          <option value="25-100">25-100</option>
+                          <option value="100-500">100-500</option>
+                          <option value="500+">500+</option>
+                        
                         </select>
                       
 
-                        <select name="test1[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
-                          <option value="leader">shirts</option>
-                          <option value="leader">2</option>
-                          <option value="leader">3</option>
-                          <option value="leader">4</option>
-                          <option value="leader">5</option>
+                        <select name="item[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                          <option value="shirts">shirts</option>
+                          <option value="hoodies">hoodies</option>
+                          <option value="pants">pants</option>
                         </select>
                  
                         <Button type="submit" className="ml-2 toolbar-send-request mr-auto toolbar-right" >Send Request</Button>
