@@ -76,7 +76,7 @@ export default class ContactPage extends React.Component {
          </div>
   
          <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
-             <Form netlify name="contact" className="row justify-content-around">
+             <Form name="contact" method="post" data-netlify="true" className="row justify-content-around">
              <input type="hidden" name="form-name" value="contact" />
                <Col  xs={12}md={6} lg={3}>
                
