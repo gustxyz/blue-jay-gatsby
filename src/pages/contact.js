@@ -141,8 +141,11 @@ export default class ContactPage extends React.Component {
 
                 <Col  xs={12}md={6} lg={3}>
                <label>Tell us about your project   <textarea class="form-control" name="project details"></textarea></label>
+              
                <label>Firm pickup date?   <input class="form-control" type="text" name="firm-pickup-date"/></label>
-
+    
+               <label className="w-100">Additional Art   <input class="form-control" type="file" name="art"/></label>
+            
    
                 <input className="opacity-0" name="bot-field" />
                 </Col>
