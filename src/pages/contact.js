@@ -92,37 +92,80 @@ export default class ContactPage extends React.Component {
     
          </div>
          
-         <form name="contact" method="post" data-netlify="true" >
+
+ <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
             
-            <input type="hidden" name="form-name" value="contact" />
+                     
+            <form name="contact" method="post" data-netlify="true" >
+               
+               <input type="hidden" name="form-name" value="contact" />
+            <Row>
+              <Col  xs={12}md={6} lg={3}>
+               <label>
+                 Name
+                 
+                 <input class="form-control" type="text" name="name"/>
+               </label>
+   
+               <label>
+                 Email 
+                 
+                 <input class="form-control"  type="email" name="email"/>
+               </label>
+   
+               <label>Phone   <input class="form-control" type="text" name="phone"/></label>
+   
+               </Col>
 
-            <label>Name: <input type="text" name="name"/></label>
+                <Col  xs={12}md={6} lg={3}>
+               <label>Project Name   <input class="form-control" type="text" name="project-name"/></label>
+   
+               <label>Type of service   <input class="form-control" type="text" name="type-of-service"   value={this.state.job || "embroider"}/></label>
+   
+               <label>Quantity Needed   <input class="form-control" type="text" name="quantity-needed" value={this.state.qty || ""} /></label>
+   
+               <label>Item to service   <input class="form-control" type="text" name="itme-to-service" value={this.state.product || ""}/></label>
+   
+               <label>Color of items   <input class="form-control" type="text" name="color-of-item"/></label>
+   
+               <label>Turnaround Time   <input  class="form-control"type="text" name="turnaround-time"/></label>
+   
+               <label>Pickup?   <input class="form-control" type="text" name="pickup"/></label>
+               </Col>
 
-            <label>Email: <input type="email" name="email"/></label>
+                <Col  xs={12}md={6} lg={3}>
+               <label>Tell us about your project   <textarea class="form-control" name="project details"></textarea></label>
+               <label>Firm pickup date?   <input class="form-control" type="text" name="firm-pickup-date"/></label>
 
-            <label>Phone: <input type="text" name="phone"/></label>
-
-            <label>Project Name: <input type="text" name="project-name"/></label>
-
-            <label>Type of service: <input type="text" name="type-of-service"/></label>
-
-            <label>Quantity Needed: <input type="text" name="quantity-needed"/></label>
-
-            <label>Item to service: <input type="text" name="itme-to-service"/></label>
-
-            <label>Color of items: <input type="text" name="color-of-item"/></label>
-
-            <label>Turnaround Time: <input type="text" name="turnaround-time"/></label>
-
-            <label>Pickup?: <input type="text" name="pickup"/></label>
-            <label>Tell us about your project: <textarea name="project details"></textarea></label>
-            <label>Firm pickup date?: <input type="text" name="firm-pickup-date"/></label>
-
-
-            <button type="submit">Get a quote!</button>
-
-          </form>
-
+   
+              
+                </Col>
+                <Col xs={12}md={12} lg={2}>
+                  <Button type="submit" className="bg-orange">Get a Quote!</Button>
+               </Col>
+                </Row>
+             </form>
+           
+              </Container>
+   
+              <Container className="mt-5 mb-5 p-2 pb-5 pt-5" >
+                <Row>
+   
+   
+                  <Col xs={12}  className="pl-5">
+                    <h2 className="text-color-orange text-left">Getting a quote?</h2>
+                    <p className="">Here's some helpful information you should have for us up front so
+                      we don't waste 2 weeks emailing eachother.</p>
+                      <p> We offer high-quality screen printing on shirts, tanks, tees, and hats.
+                      We specialize in larger quantity orders of 25 and up to 1,000+.
+                      If you're looking for good quality and great customer service look no further.
+                    </p>
+                    <Button className="bg-orange ml-auto pl-4 pr-4">Give us the cash</Button>
+                  </Col>
+                </Row>
+              </Container> 
+   
+   
 
          {/* <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
              <Form name="contact"  method="POST" data-netlify="true" className="row justify-content-around" >
