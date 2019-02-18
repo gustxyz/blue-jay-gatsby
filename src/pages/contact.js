@@ -93,24 +93,26 @@ export default class ContactPage extends React.Component {
          </div>
   
          <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
-             <Form name="contact" action="/index" method="GET" data-netlify="true" className="row justify-content-around" data-netlify-honeypot="bot-field">
+             <Form name="contact"  method="POST" data-netlify="true" className="row justify-content-around" >
              <input type="hidden" name="form-name" value="contact" />
                <Col  xs={12}md={6} lg={3}>
                
                   <Form.Group controlId="exampleForm.ControlInput1">
-                    <Form.Label for="name">Name*</Form.Label>
+                    Name
                     <Form.Control type="text" name="name"  placeholder="Alex Long" />
-                  </Form.Group>
 
-                  <Form.Group controlId="exampleForm.ControlInput2">
-                    <Form.Label for="email">Email*</Form.Label>
+               
+                     Email
                     <Form.Control type="text" name="email"  placeholder="test@gmail.com" />
+
+                    Phone
+                    <Form.Control type="text" name="phone"  placeholder="1509873834" />
+
+
+
                   </Form.Group>
 
-                  <Form.Group controlId="exampleForm.ControlInput3">
-                    <Form.Label for="phone">Phone*</Form.Label>
-                    <Form.Control type="text" name="phone"  placeholder="15091234567" />
-                  </Form.Group>
+                  
                 
                </Col>
                <Col  xs={12}md={6} lg={3}>
