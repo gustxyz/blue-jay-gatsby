@@ -16,29 +16,31 @@ export default class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     
-    this.state = {
-      job : false,
-      qty : false,
-      product : false
-    }  
-    
 
+    if(window !== undefined) {
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      
+        let formJob = url.searchParams.get("job");
+        let formQty = url.searchParams.get("qty");
+        let formProduct =  url.searchParams.get("product");
     
+        this.state = {
+          job : formJob,
+          qty : formQty,
+          product : formProduct
+        }  
+    }
+  
+
+      console.log("Did mount");
+      console.log(this.state);
+
+
   }
 
   componentDidMount(){
-    let url_string = window.location.href;
-    let url = new URL(url_string);
-    
-      let formJob = url.searchParams.get("job");
-      let formQty = url.searchParams.get("qty");
-      let formProduct =  url.searchParams.get("product");
-  
-      this.state = {
-        job : formJob,
-        qty : formQty,
-        product : formProduct
-      }  
+   
   }
 
 
