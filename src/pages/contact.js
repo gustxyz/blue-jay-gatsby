@@ -96,22 +96,23 @@ export default class ContactPage extends React.Component {
              <Form name="contact" method="post" data-netlify="true" className="row justify-content-around" data-netlify-honeypot="bot-field">
              <input type="hidden" name="bot-field" />
              <input type="hidden" name="form-name" value="contact" />
-               <Col  xs={12}md={6} lg={3}>
+               <Col xs={12}md={6} lg={3}>
                
                     <Form.Group controlId="exampleForm.ControlInput1">
                       <Form.Label for="Name">Name*</Form.Label>
-                      <Form.Control type="text" name="Name"  placeholder="Alex Long" />
+                      <Form.Control type="text" name="Name"  placeholder="Alex Long" value="test" />
               
         
                       <Form.Label for="Email">Email*</Form.Label>
-                      <Form.Control type="text" name="Email"  placeholder="test@gmail.com" />
+                      <Form.Control type="text" name="Email"  placeholder="test@gmail.com" value="test" />
                 
                       <Form.Label for="Phone">Phone*</Form.Label>
-                      <Form.Control type="text" name="Phone"  placeholder="15091234567" />
+                      <Form.Control type="text" name="Phone"  placeholder="15091234567" value="test" />
                     </Form.Group>
                 
                </Col>
-               <Col  xs={12}md={6} lg={3}>
+
+               <Col xs={12}md={6} lg={3}>
                
                     <Form.Group controlId="exampleForm.ControlInput4">
                       <Form.Label>Project Name*</Form.Label>
