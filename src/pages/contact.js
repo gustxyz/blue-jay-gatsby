@@ -17,6 +17,12 @@ export default class ContactPage extends React.Component {
     super(props);
     
 
+    this.state = {
+      job : false,
+      qty : false,
+      product : false
+    }  
+
     if(typeof window !== `undefined`) {
       let url_string = window.location.href;
       let url = new URL(url_string);
