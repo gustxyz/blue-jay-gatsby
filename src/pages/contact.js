@@ -91,10 +91,25 @@ export default class ContactPage extends React.Component {
       
     
          </div>
-  
-         <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
+         
+         <form name="contact" method="post" data-netlify="true" >
+            
+            <input type="hidden" name="form-name" value="contact" />
+
+            <label>Your Name: <input type="text" name="name"/></label>
+
+            <label>Your Email: <input type="email" name="email"/></label>
+            <label>Message: <textarea name="message"></textarea></label>
+            <button type="submit">Send</button>
+
+          </form>
+
+
+         {/* <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
              <Form name="contact"  method="POST" data-netlify="true" className="row justify-content-around" >
+
              <input type="hidden" name="form-name" value="contact" />
+
                <Col  xs={12}md={6} lg={3}>
                
                   <Form.Group controlId="exampleForm.ControlInput1">
@@ -213,7 +228,7 @@ export default class ContactPage extends React.Component {
                </Col>
              </Row>
            </Container>
-
+ */}
 
 
 
