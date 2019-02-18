@@ -107,8 +107,8 @@ export default class ContactPage extends React.Component {
                       <Form.Control type="text" name="email"  placeholder="test@gmail.com" />
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput3">
-                      <Form.Label for="phone">Phone*</Form.Label>
-                      <Form.Control type="text" name="phone"  placeholder="15091234567" />
+                      <Form.Label for="phonenum">Phone*</Form.Label>
+                      <Form.Control type="text" name="phonenum"  placeholder="15091234567" />
                     </Form.Group>
                 
                </Col>
