@@ -17,6 +17,12 @@ export default class ContactPage extends React.Component {
     super(props);
     
     
+    
+
+    
+  }
+
+  componentDidMount(){
     let url_string = window.location.href;
     let url = new URL(url_string);
     
@@ -29,10 +35,9 @@ export default class ContactPage extends React.Component {
         qty : formQty,
         product : formProduct
       }  
-    
-
-    
   }
+
+
 
     render() {
 
