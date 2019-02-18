@@ -16,7 +16,11 @@ export default class ContactPage extends React.Component {
   constructor(props) {
     super(props);
     
-    
+    this.state = {
+      job : false,
+      qty : false,
+      product : false
+    }  
     
 
     
