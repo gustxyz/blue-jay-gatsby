@@ -76,13 +76,13 @@ export default class IndexPage extends React.Component {
                           <option value="custom">custom</option>
                         </select>
                   
-                        <select name="qty"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                        <select name="qty" className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
                           <option value="25-100">25-100</option>
                           <option value="100-500">100-500</option>
                           <option value="500+">500+</option>
                         </select>
                       
-                        <select name="product"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                        <select name="product" className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
                           <option value="shirts">shirts</option>
                           <option value="hoodies">hoodies</option>
                           <option value="pants">pants</option>

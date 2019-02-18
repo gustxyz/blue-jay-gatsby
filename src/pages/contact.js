@@ -188,7 +188,7 @@ export default class ContactPage extends React.Component {
            
                </Col>
                <Col xs={12}md={12} lg={2}>
-                  <Button className="bg-orange">Get a Quote!</Button>
+                  <Button type="submit" className="bg-orange">Get a Quote!</Button>
                </Col>
              </Form>       
            </Container>
