@@ -99,7 +99,7 @@ export default class ContactPage extends React.Component {
  <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
             
                      
-            <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field" >
+            <form name="contact"  data-netlify="true" netlify-honeypot="bot-field" >
                
                <input type="hidden" name="form-name" value="contact" />
             <Row className="pl-5 pr-5 ">
