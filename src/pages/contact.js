@@ -17,7 +17,7 @@ export default class ContactPage extends React.Component {
     super(props);
     
 
-    if(window !== null) {
+    if(typeof window !== `undefined`) {
       let url_string = window.location.href;
       let url = new URL(url_string);
       
