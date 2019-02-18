@@ -93,25 +93,27 @@ export default class ContactPage extends React.Component {
          </div>
   
          <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
-             <Form name="contact" method="POST" data-netlify="true" className="row justify-content-around" data-netlify-honeypot="bot-field">
-             <input type="hidden" name="bot-field" />
+             <Form name="contact" action="/index" method="GET" data-netlify="true" className="row justify-content-around" data-netlify-honeypot="bot-field">
              <input type="hidden" name="form-name" value="contact" />
-               <Col xs={12}md={6} lg={3}>
+               <Col  xs={12}md={6} lg={3}>
                
-  
-                  
-                      <Form.Control type="text" name="Name"  placeholder="Alex Long" value="test" />
-              
-        
-                      <Form.Control type="text" name="Email"  placeholder="test@gmail.com" value="test" />
-                
-             
-                      <Form.Control type="text" name="Phone"  placeholder="15091234567" value="test" />
-     
+                  <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Label for="name">Name*</Form.Label>
+                    <Form.Control type="text" name="name"  placeholder="Alex Long" />
+                  </Form.Group>
+
+                  <Form.Group controlId="exampleForm.ControlInput2">
+                    <Form.Label for="email">Email*</Form.Label>
+                    <Form.Control type="text" name="email"  placeholder="test@gmail.com" />
+                  </Form.Group>
+
+                  <Form.Group controlId="exampleForm.ControlInput3">
+                    <Form.Label for="phone">Phone*</Form.Label>
+                    <Form.Control type="text" name="phone"  placeholder="15091234567" />
+                  </Form.Group>
                 
                </Col>
-
-               <Col xs={12}md={6} lg={3}>
+               <Col  xs={12}md={6} lg={3}>
                
                     <Form.Group controlId="exampleForm.ControlInput4">
                       <Form.Label>Project Name*</Form.Label>
