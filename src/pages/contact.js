@@ -96,11 +96,30 @@ export default class ContactPage extends React.Component {
             
             <input type="hidden" name="form-name" value="contact" />
 
-            <label>Your Name: <input type="text" name="name"/></label>
+            <label>Name: <input type="text" name="name"/></label>
 
-            <label>Your Email: <input type="email" name="email"/></label>
-            <label>Message: <textarea name="message"></textarea></label>
-            <button type="submit">Send</button>
+            <label>Email: <input type="email" name="email"/></label>
+
+            <label>Phone: <input type="text" name="phone"/></label>
+
+            <label>Project Name: <input type="text" name="project-name"/></label>
+
+            <label>Type of service: <input type="text" name="type-of-service"/></label>
+
+            <label>Quantity Needed: <input type="text" name="quantity-needed"/></label>
+
+            <label>Item to service: <input type="text" name="itme-to-service"/></label>
+
+            <label>Color of items: <input type="text" name="color-of-item"/></label>
+
+            <label>Turnaround Time: <input type="text" name="turnaround-time"/></label>
+
+            <label>Pickup?: <input type="text" name="pickup"/></label>
+            <label>Tell us about your project: <textarea name="project details"></textarea></label>
+            <label>Firm pickup date?: <input type="text" name="firm-pickup-date"/></label>
+
+
+            <button type="submit">Get a quote!</button>
 
           </form>
 
