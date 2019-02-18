@@ -13,6 +13,27 @@ import yelpLogo from '../img/logos/yelp-logo.svg';
 
 
 export default class ContactPage extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    
+      let formJob = url.searchParams.get("job");
+      let formQty = url.searchParams.get("qty");
+      let formProduct =  url.searchParams.get("product");
+  
+      this.state = {
+        job : formJob,
+        qty : formQty,
+        product : formProduct
+      }  
+    
+
+    
+  }
+
     render() {
 
       return (
@@ -55,7 +76,8 @@ export default class ContactPage extends React.Component {
          </div>
   
          <Container className="mt-n10 bg-gray blurb pl-3 pr-3"  >
-             <Form className="row justify-content-around">
+             <Form netlify name="contact" className="row justify-content-around">
+             <input type="hidden" name="form-name" value="contact" />
                <Col  xs={12}md={6} lg={3}>
                
                     <Form.Group controlId="exampleForm.ControlInput1">
@@ -82,7 +104,11 @@ export default class ContactPage extends React.Component {
                       <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
                         <Form.Label>Type of Service</Form.Label>
                         <Form.Control as="select">
-                          <option>Embroidary</option>
+                          <option> 
+                          {
+                            this.state.job || "embroider"
+                          }
+                          </option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
@@ -91,7 +117,7 @@ export default class ContactPage extends React.Component {
                       </Form.Group>
                       <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
                           <Form.Label>Qunatity Needed*</Form.Label>
-                          <Form.Control type="quantity" placeholder="3" />
+                          <Form.Control type="quantity" placeholder="3" value={this.state.qty || ""} />
                       </Form.Group>
                     </div>
 
@@ -99,7 +125,8 @@ export default class ContactPage extends React.Component {
                       <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
                         <Form.Label>Item to service</Form.Label>
                         <Form.Control as="select">
-                          <option>Shirt</option>
+                         
+                          <option>{this.state.product}</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>

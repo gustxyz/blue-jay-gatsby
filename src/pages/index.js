@@ -17,6 +17,7 @@ import togglesIcon from '../img/customer_icons/toggles-icon.svg';
 
 
 export default class IndexPage extends React.Component {
+
   render() {
     // const { data } = this.props
     // const { edges: posts } = data.allMarkdownRemark
@@ -66,24 +67,22 @@ export default class IndexPage extends React.Component {
                 <Col xs={6} md={7} lg={7} className="offset-lg-1">
                 <ButtonToolbar>
                     <div className="pl-3 pr-3 ml-auto gray-border-right bg-white toolbar-left">I want to...</div>
-                    <form name="contact" method="post" data-netlify="true"  className="d-flex">
-                    <input type="hidden" name="form-name" value="contact" />
-                        <select name="role[]" className=" gray-border-right dropdown-toggle btn btn-primary home-contact-button" >
+                    <form name="contact" method="get" action="/contact"   className="d-flex">
+                    
+                       <input type="hidden" name="form-submit" value="true" />
+                        <select name="job" className="gray-border-right dropdown-toggle btn btn-primary home-contact-button" >
                           <option value="print">print</option>
                           <option value="embroider">embroider</option>
                           <option value="custom">custom</option>
                         </select>
                   
-
-                        <select name="test[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                        <select name="qty"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
                           <option value="25-100">25-100</option>
                           <option value="100-500">100-500</option>
                           <option value="500+">500+</option>
-                        
                         </select>
                       
-
-                        <select name="test1[]"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
+                        <select name="product"  className="gray-border-right  dropdown-toggle btn btn-primary home-contact-button" >
                           <option value="shirts">shirts</option>
                           <option value="hoodies">hoodies</option>
                           <option value="pants">pants</option>
@@ -159,6 +158,7 @@ export default class IndexPage extends React.Component {
 
 
            {/* Footer */}
+
            {/* LOGO */}
            <Container fluid className="bg-blue pt-3">
              <Row className="align-items-center footer-margin">
@@ -167,6 +167,7 @@ export default class IndexPage extends React.Component {
                      <img src={bluejayLogo} />
                    </a>
                </Col>
+
               {/*SOCIAL*/}
                <Col xs={12} md={8} className="d-flex flex-column justify-content-center">
                    <div className="d-flex justify-content-center">
@@ -181,6 +182,7 @@ export default class IndexPage extends React.Component {
                         </a>
                     </div>
                </Col>
+
              {/*SITE MAP*/}
                <Col xs={12} md={2}>
                    <div className="justify-content-end text-right">
