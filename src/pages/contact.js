@@ -117,26 +117,26 @@ export default class ContactPage extends React.Component {
    
                </Col>
 
-                <Col className=" justify-content-between"  xs={12}md={6} lg={5}>
-               <label>Project Name   <input class="form-control" type="text" name="project-name"/></label>
-              <div className="d-flex ">
-               <label>Type of service   <input class="form-control" type="text" name="type-of-service"   placeholder={this.state.job || "embroider"}/></label>
-   
-               <label>Quantity Needed   <input class="form-control" type="text" name="quantity-needed" placeholder={this.state.qty || ""} /></label>
-              </div>
-              <div className="d-flex">
-                <label>Item to service   <input class="form-control" type="text" name="item-to-service" placeholder={this.state.product || ""}/></label>
-   
-                <label>Color of items   <input class="form-control" type="text" name="color-of-item"/></label>
-               </div>
-               <div className="d-flex">
-                <label>Turnaround Time   <input  class="form-control"type="text" name="turnaround-time"/></label>
-   
-                <label>Pickup?   <input class="form-control" type="text" name="pickup"/></label>
-               </div>
+              <Col className=" "  xs={12}md={6} lg={5}>
+                <label>Project Name   <input class="form-control" type="text" name="project-name"/></label>
+                <div className="d-flex justify-content-between">
+                  <label>Type of service   <input class="form-control" type="text" name="type-of-service"   placeholder={this.state.job || "embroider"}/></label>
+    
+                  <label>Quantity Needed   <input class="form-control" type="text" name="quantity-needed" placeholder={this.state.qty || ""} /></label>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <label>Item to service   <input class="form-control" type="text" name="item-to-service" placeholder={this.state.product || ""}/></label>
+    
+                  <label>Color of items   <input class="form-control" type="text" name="color-of-item"/></label>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <label>Turnaround Time   <input  class="form-control"type="text" name="turnaround-time"/></label>
+    
+                  <label>Pickup?   <input class="form-control" type="text" name="pickup"/></label>
+                </div>
                </Col>
 
-                <Col  xs={12}md={6} lg={3}>
+                <Col  xs={12}md={6} lg={2}>
                <label>Tell us about your project   <textarea class="form-control" name="project details"></textarea></label>
                <label>Firm pickup date?   <input class="form-control" type="text" name="firm-pickup-date"/></label>
 
@@ -145,8 +145,9 @@ export default class ContactPage extends React.Component {
                 </Col>
                 <Col xs={12}md={12} lg={2}>
                   <Button type="submit" className="bg-orange">Get a Quote!</Button>
-                  <div data-netlify-recaptcha="true"></div>
+              
                </Col>
+               <div data-netlify-recaptcha="true"></div>
                 </Row>
              </form>
            
