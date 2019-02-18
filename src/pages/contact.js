@@ -98,20 +98,18 @@ export default class ContactPage extends React.Component {
              <input type="hidden" name="form-name" value="contact" />
                <Col  xs={12}md={6} lg={3}>
                
-                  <label>
-                      Name<br />
-                    <input type="text" name="name"  />
-                  </label>
-
-                    <label>
-                      Email<br />
-                    <input type="text" name="email"  />
-                  </label>
-
-                  <label>
-                      Phone<br />
-                    <input type="text" name="email"  />
-                  </label>
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label for="Name">Name*</Form.Label>
+                      <Form.Control type="text" name="Name"  placeholder="Alex Long" />
+              
+        
+                      <Form.Label for="Email">Email*</Form.Label>
+                      <Form.Control type="text" name="Email"  placeholder="test@gmail.com" />
+                
+                      <Form.Label for="Phone">Phone*</Form.Label>
+                      <Form.Control type="text" name="Phone"  placeholder="15091234567" />
+                    </Form.Group>
+                
                </Col>
                <Col  xs={12}md={6} lg={3}>
                
