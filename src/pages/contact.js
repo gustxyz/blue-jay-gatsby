@@ -101,11 +101,11 @@ export default class ContactPage extends React.Component {
                       <Form.Label>Name*</Form.Label>
                       <Form.Control type="text" name="name"  placeholder="Alex Long" />
                     </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Group controlId="exampleForm.ControlInput2">
                       <Form.Label>Email*</Form.Label>
                       <Form.Control type="text" name="email"  placeholder="test@gmail.com" />
                     </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Group controlId="exampleForm.ControlInput3">
                       <Form.Label>Phone*</Form.Label>
                       <Form.Control type="text" name="phone"  placeholder="15091234567" />
                     </Form.Group>
@@ -113,12 +113,12 @@ export default class ContactPage extends React.Component {
                </Col>
                <Col  xs={12}md={6} lg={3}>
                
-                    <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Group controlId="exampleForm.ControlInput4">
                       <Form.Label>Project Name*</Form.Label>
                       <Form.Control type="text" name="project-name"  placeholder="New BlueJay Website" />
                     </Form.Group>
                     <div className="d-flex justify-content-around">
-                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
+                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect5">
                         <Form.Label>Type of Service</Form.Label>
                         <Form.Control type="text" name="job"  as="select">
                           <option> 
@@ -132,14 +132,14 @@ export default class ContactPage extends React.Component {
                           <option>5</option>
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
+                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect6">
                           <Form.Label>Qunatity Needed*</Form.Label>
                           <Form.Control type="text" name="quantity"  placeholder="3" value={this.state.qty || ""} />
                       </Form.Group>
                     </div>
 
                     <div className="d-flex justify-content-around">
-                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
+                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect7">
                         <Form.Label>Item to service</Form.Label>
                         <Form.Control type="text" name="product"  as="select">
                          
@@ -150,14 +150,14 @@ export default class ContactPage extends React.Component {
                           <option>5</option>
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
+                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect8">
                           <Form.Label>Quntatity Needed*</Form.Label>
                           <Form.Control type="text" name="quantity"   type="quantity" placeholder="3" />
                       </Form.Group>
                     </div>
 
                     <div className="d-flex justify-content-around">
-                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect1">
+                      <Form.Group className="contact-input-sidebyside"  controlId="exampleForm.ControlSelect9">
                         <Form.Label>Turnaround Time</Form.Label>
                         <Form.Control type="text" name="turn-time"  as="select">
                           <option>Yes</option>
@@ -167,7 +167,7 @@ export default class ContactPage extends React.Component {
                           <option>5</option>
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect2">
+                      <Form.Group className="contact-input-sidebyside ml-auto" controlId="exampleForm.ControlSelect10">
                           <Form.Label>Qunatity Needed*</Form.Label>
                           <Form.Control type="text" name="quantity-needed" type="quantity" placeholder="3" />
                       </Form.Group>
