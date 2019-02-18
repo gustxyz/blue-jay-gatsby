@@ -83,12 +83,15 @@ export default class ContactPage extends React.Component {
   
         
          <div className="view-height-75 bg-orange position-relative" >
+         <div className="text-right contact-logo">
+              <Link to="/">
+                    <img src={bluejayLogo} />
+              </Link>
+              </div>
+      
     
            <h1 className="text-center text-white pt-25-vh">Tell us about your project!</h1>
-           <Link className="page-link bj-header-logo" to="/">
-               <img src={bluejayLogo} />
-           </Link>
-      
+          
     
          </div>
          
@@ -118,7 +121,7 @@ export default class ContactPage extends React.Component {
                </Col>
 
               <Col className=" "  xs={12}md={6} lg={5}>
-                <label>Project Name   <input class="form-control" type="text" name="project-name"/></label>
+                <label className="w-100">Project Name   <input class="form-control" type="text" name="project-name"/></label>
                 <div className="d-flex justify-content-between">
                   <label>Type of service   <input class="form-control" type="text" name="type-of-service"   placeholder={this.state.job || "embroider"}/></label>
     
@@ -141,7 +144,7 @@ export default class ContactPage extends React.Component {
                <label>Firm pickup date?   <input class="form-control" type="text" name="firm-pickup-date"/></label>
 
    
-                <input name="bot-field" />
+                <input className="opacity-0" name="bot-field" />
                 </Col>
                 <Col xs={12}md={12} lg={2}>
                   <Button type="submit" className="bg-orange">Get a Quote!</Button>
