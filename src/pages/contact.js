@@ -99,16 +99,16 @@ export default class ContactPage extends React.Component {
                <Col  xs={12}md={6} lg={3}>
                
                     <Form.Group controlId="exampleForm.ControlInput1">
-                      <Form.Label for="name">Name*</Form.Label>
-                      <Form.Control type="text" name="name"  placeholder="Alex Long" />
+                      <Form.Label for="Name">Name*</Form.Label>
+                      <Form.Control type="text" name="Name"  placeholder="Alex Long" />
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput2">
-                      <Form.Label for="email">Email*</Form.Label>
-                      <Form.Control type="text" name="email"  placeholder="test@gmail.com" />
+                      <Form.Label for="Email">Email*</Form.Label>
+                      <Form.Control type="text" name="Email"  placeholder="test@gmail.com" />
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput3">
-                      <Form.Label for="phonenum">Phone*</Form.Label>
-                      <Form.Control type="text" name="phonenum"  placeholder="15091234567" />
+                      <Form.Label for="Phone">Phone*</Form.Label>
+                      <Form.Control type="text" name="Phone"  placeholder="15091234567" />
                     </Form.Group>
                 
                </Col>
